@@ -20,21 +20,21 @@ One Commune is envisioned as a platform to connect users within a geographical v
   Chat Interface: The chat interface displays the message history for the conversation.
 
 # Detailed Technical Workflow
-1. Home Page (index.html)
+1. Home Page (index.html) 
 Functionality: Collects user location via a form.
 Flow: On submission, data is sent to /submit_location.
-2. Submit Location Endpoint (/submit_location)
+2. Submit Location Endpoint (/submit_location) 
 Data Processing: Receives and processes user-submitted location.
 User List Update: Adds the new location to the user list.
 Redirection: Redirects to the Nearby Users page with the user's location as a parameter.
-3. Nearby Users Page (/nearby_users)
+3. Nearby Users Page (/nearby_users) 
 Location Extraction: Extracts the user's location from the query parameters.
 Proximity Calculation: Uses Geopy to find users within a 10km radius.
 Display: Renders a list of nearby users with "Connect" buttons.
-4. Connect Page (/connect/<latitude>/<longitude>)
+4. Connect Page (/connect/<latitude>/<longitude>) 
 User Connection: Displays selected user's location and offers a "Chat Now" button.
 Navigation: Allows navigation back to Nearby Users or the Home page.
-5. Chat Page (/chat/<latitude>/<longitude>)
+5. Chat Page (/chat/<latitude>/<longitude>) 
 Message Form: Provides a form for users to send messages.
 Message Handling: Stores messages and displays the message history related to the conversation.
 
